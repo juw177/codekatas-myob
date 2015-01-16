@@ -1,0 +1,35 @@
+<div class="jumbotron">
+    <h2>Kata16: Business rules</h2>
+
+    The problem of business rules have been around for a long time and what I have seen in my past commercial experience leaves a lot to be desired. If I were the business rules architect, here are some of the things that can manage a large set of changing business rules: 
+
+
+    <h4>Separation from application code</h4>
+    The core concept. Business rules should exist on its own and not tied to any application calling it.
+
+    <h4>Interfaces</h4>
+    Separation also goes for activities that are initiated by workflows. The rule engine will know nothing about the applications' implementation of the service interfaces.
+
+
+    <h4>Identifying and categorising business rules</h4>
+    <ul>
+        <li>Is the rule a fact (eg, payment must be for more than $0) or a workflow (eg, successful payment intiatates shipping)</li>
+        <li>Conditions which the rule fires</li>
+        <li>Data that is required to execute the rule</li>
+    </ul>
+
+    <h4>Choice of rules engine</h4>
+    Some things worth considering may be:
+    <ul>
+        <li>Fit for the areas of expertise of developers</li>
+        <li>Ease of interfacing with existing systems / services</li>
+        <li>Adheres to industry standards (somewhat, since there is no hard industry standard for rules engines and BPM)</li>
+        <li>Technical skills of non IT users who will maintain the system</li>
+        <li>Price</li>
+    </ul>
+
+    <h4>Rules maintenance</h4>
+    A rules management web interface will allow the rules to be maintained by non IT users. Rules and processes may be represented by pseudo code and visual UIs for ease of adminstration.
+
+
+</div>

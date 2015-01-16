@@ -1,0 +1,22 @@
+<div class="jumbotron">
+	<h2>Kata13: Count Java code lines</h2>
+	Philosophy: we only want to count the lines and do not need to use complex regex to match the comments.
+	<ol>
+		<li>Delete comments while ignoring /* that are inside double
+			quotes (as long as double quote is not inside a comment)</li>
+		<li>Split the input into an array of lines</li>
+		<li>Loop through each line and strip white space. If the first
+			character of the line is not //, add 1 to counter</li>
+	</ol>
+
+	Unit tests can be run using "npm test"
+</div>
+
+
+<textarea class="form-control" rows="8" id="codeInput"></textarea>
+<br />
+<button type="button" class="btn btn-primary btn-lg" id="countBtn">Count lines</button>
+<h3 id="countResult"></h3>
+
+
+<script src="../js/count-code-lines.js"></script>

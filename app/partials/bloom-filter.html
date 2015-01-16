@@ -1,0 +1,66 @@
+<div class="jumbotron">
+	<h2>Kata05: Bloom filter</h2>
+	<ul>
+		<li>I converted the dictionary file into json so it can
+			be loaded via a REST call via express</li>
+		<li>Uses murmur hash function borrowed from <a
+			href="https://gist.github.com/588423">https://gist.github.com/588423</a>.
+			It is non crptographic which should yield better performance.
+		</li>
+		<li>Value is hashed 3 times</li>
+		
+	</ul>
+
+	<br />
+	<br />
+	<div class="input-group" style="width: 300px">
+		<input type="text" class="form-control" id="bloomInitInput"
+			placeholder="Size of array" value="10000000"> <span
+			class="input-group-btn">
+			<button type="button" class="btn btn-danger" id="bloomInitBtn">Reset
+				array size</button>
+		</span>
+	</div>
+
+
+</div>
+
+<br />
+
+
+<div class="row">
+	<div class="col-xs-8">
+		<div class="input-group input-group-lg">
+			<input type="text" class="form-control" id="bloomAddInput"
+				placeholder="Word to add"> <span class="input-group-btn">
+				<button type="button" class="btn btn-primary btn-lg"
+					id="bloomAddBtn">Add</button>
+			</span>
+		</div>
+		<h4 id="addResult" class="text-success"></h4>
+	</div>
+	<div class="col-xs-4">
+
+		<button type="button" class="btn btn-primary btn-lg btn-block"
+			id="bloomAddDictionaryBtn">Add dictionary</button>
+	</div>
+
+
+	<div class="col-xs-8">
+		<br />
+		<br />
+		<div class="input-group input-group-lg">
+			<input type="text" class="form-control" id="bloomCheckInput"
+				placeholder="Word to check"> <span class="input-group-btn">
+				<button type="button" class="btn btn-primary btn-lg"
+					id="bloomCheckBtn">Check</button>
+			</span>
+		</div>
+		<h4 id="checkResult"></h4>
+	</div>
+
+</div>
+
+
+<script src="../js/murmurhash.js"></script>
+<script src="../js/bloom-filter.js"></script>

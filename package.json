@@ -1,0 +1,20 @@
+{
+  "name": "codekatas-myob",
+  "version": "0.0.1",
+  "author": "Jonathan Wong",
+  "description": "myob tech test",
+  "repository": "https://github.com/juw177/codekatas-myob",
+  "devDependencies": {
+  	"express": "3.x",
+    "karma": "^0.12.2",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5"
+  },
+  "scripts": {
+  	"prestart": "npm install",
+
+	"pretest": "npm install",
+	"test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+	"test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run"
+  }
+}
