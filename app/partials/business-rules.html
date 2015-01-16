@@ -1,15 +1,20 @@
 <div class="jumbotron">
     <h2>Kata16: Business rules</h2>
 
-    The problem of business rules have been around for a long time and what I have seen in my past commercial experience leaves a lot to be desired. If I were the business rules architect, here are some of the things that can manage a large set of changing business rules: 
+    The problem of business rules have been around for a long time and what I have seen in my past commercial experience leaves a lot to be desired. If I were the business rules designer, here are some of the things that can manage a large set of changing business rules: 
 
+    <h4>Components</h4>
+    <ul>
+        <li>Development environment: Allow developers to create rules</li>
+        <li>Rules engine and repository: Makes the business decisions. This is deployed in its own environment and exposed as a service to be accessed by different applications.</li>
+        <li>Rules management UI: Web interface that allows non IT users to maintain rules.  Rules may be represented by pseudo code and visual UIs for ease of adminstration. 
+    </ul>
 
     <h4>Separation from application code</h4>
     The core concept. Business rules should exist on its own and not tied to any application calling it.
 
     <h4>Interfaces</h4>
     Separation also goes for activities that are initiated by workflows. The rule engine will know nothing about the applications' implementation of the service interfaces.
-
 
     <h4>Identifying and categorising business rules</h4>
     <ul>
@@ -18,7 +23,7 @@
         <li>Data that is required to execute the rule</li>
     </ul>
 
-    <h4>Choice of rules engine</h4>
+    <h4>Choice of rules framework</h4>
     Some things worth considering may be:
     <ul>
         <li>Fit for the areas of expertise of developers</li>
@@ -27,9 +32,6 @@
         <li>Technical skills of non IT users who will maintain the system</li>
         <li>Price</li>
     </ul>
-
-    <h4>Rules maintenance</h4>
-    A rules management web interface will allow the rules to be maintained by non IT users. Rules and processes may be represented by pseudo code and visual UIs for ease of adminstration.
 
 
 </div>
