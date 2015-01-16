@@ -13,8 +13,8 @@
   "scripts": {
   	"prestart": "npm install",
 
-	"pretest": "npm install",
-	"test": "node node_modules/karma/bin/karma start test/karma.conf.js",
-	"test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run"
+  	"pretest": "npm install",
+  	"test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+  	"test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run"
   }
 }

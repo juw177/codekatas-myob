@@ -4,12 +4,6 @@ var express = require('express'),
 	wordlist = require('./wordlist.json'),
 	app = express();
 
-
-var env = process.env.NODE_ENV || 'development';
-
-//setup node environment -> defaults to development
-process.env.NODE_ENV = env;
-
 function globalErrorHandler(err, req, res, next) {
     console.error('Unexpected ERROR: ' + err.stack);
     res.send(500, 'Unexpected Error');
@@ -18,7 +12,6 @@ function globalErrorHandler(err, req, res, next) {
 var env = process.env.NODE_ENV || 'development';
 if ('development' == env) {
     app.use(express.logger('dev'));
-	//app.use(express.json());
 	app.use(express.urlencoded());
 
 	//the middleware order matters that's why we use the rounting middleware before the static one
